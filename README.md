@@ -23,6 +23,9 @@
 >>> Почта: ry-flotu@mail.ru,
 >>> город проживания Ростов-на-Дону
 
+В качестве коммерчиской состовляющей был взят проект по моему магазину электроники.В данный момент ведутся поиски поставщиков и компаний по продаже и производству элект.батарей.Были взяты различные элект. товары ,которые будут заменены.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
