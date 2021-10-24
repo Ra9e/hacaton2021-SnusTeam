@@ -1,25 +1,5 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import ModalApp from "./modalApp";
-import SelectSB from "./selectSB";
-import SelectConsume from "./selectConsume";
-
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('map')
-);
-/*
-ReactDOM.render(<Scene />, document.getElementById('root'))
-*/
-ReactDOM.render(<ModalApp />, document.getElementById('popup'))
-ReactDOM.render(<SelectSB />, document.getElementById('selectSB'))
-ReactDOM.render(<SelectConsume />, document.getElementById('selectConsume'))
+// Получаем canvas элемент
+import reportWebVitals from "./reportWebVitals";
 
 let canvas = document.getElementById('lineChart');
 
@@ -54,7 +34,7 @@ for(var i=0; i<12; i++) {
 }
 
 // Объявляем массив данных графика
-let data = [ 10, 53, 39, 54, 21, 39, 100, 23, 44, 44, 23, 10 , 2, 5 ];
+let data = [ 10, 53, 39, 54, 21, 39, 89, 23, 44, 44, 23, 10 , 2, 5 ];
 
 // Назначаем зелёный цвет для графика
 ctx.fillStyle = "purple";
@@ -68,3 +48,4 @@ for(var i=0; i<data.length; i++) {
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

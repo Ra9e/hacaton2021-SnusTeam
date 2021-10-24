@@ -1,6 +1,9 @@
+/*
 import React, { Component } from 'react'
 import * as THREE from 'three'
 import DragControls from 'drag-controls'
+import './dragSB.css'
+
 DragControls.install({THREE: THREE})
 
 class Scene extends Component {
@@ -8,8 +11,8 @@ class Scene extends Component {
     constructor(props) {
         super(props)
 
-        /*this.start = this.start.bind(this)
-        this.stop = this.stop.bind(this)*/
+        /!*this.start = this.start.bind(this)
+        this.stop = this.stop.bind(this)*!/
         this.animate = this.animate.bind(this)
 
     }
@@ -98,7 +101,8 @@ class Scene extends Component {
     render() {
         return (
             <div
-                style={{ width: '300px', height: '300px' }}
+                className='dragScene'
+                style={{ width: '200px', height: '200px' }}
                 ref={(mount) => { this.mount = mount }}
             />
         )
@@ -106,3 +110,87 @@ class Scene extends Component {
 }
 
 export default Scene
+*/
+
+import React, {Component, createElement} from 'react'
+import ResizableRect from 'react-resizable-rotatable-draggable'
+import {createElementNS} from "three/src/utils";
+
+class Draggable extends Component {
+    constructor() {
+        super()
+        this.state = {
+            width: 60,
+            height: 60,
+            top: 60,
+            left: 60,
+            rotateAngle: 0
+        }
+    }
+
+    handleResize = (style, isShiftKey, type) => {
+        // type is a string and it shows which resize-handler you clicked
+        // e.g. if you clicked top-right handler, then type is 'tr'
+        let { top, left, width, height } = style
+        top = Math.round(top)
+        left = Math.round(left)
+        width = Math.round(width)
+        height = Math.round(height)
+        this.setState({
+            top,
+            left,
+            width,
+            height
+        })
+    }
+
+    handleRotate = (rotateAngle) => {
+        this.setState({
+            rotateAngle
+        })
+    }
+
+    handleDrag = (deltaX, deltaY) => {
+        this.setState({
+            left: this.state.left + deltaX,
+            top: this.state.top + deltaY
+        })
+    }
+
+    addRect() {
+        var newRect = createElement('<ResizableRect left={left} top={top} width={width} height={height} rotateAngle={rotateAngle} zoomable="n, w, s, e, nw, ne, se, sw" onRotate={this.handleRotate} onResize={this.handleResize} onDrag={this.handleDrag}/>')
+        document.getElementById('App').appendChild(newRect);
+    }
+
+    render() {
+        const {width, top, left, height, rotateAngle} = this.state
+        return (
+            <div id='App' className="App">
+                <button className="addRect" onClick="addRect()">Добавить ещё</button>
+                <ResizableRect
+                    left={left}
+                    top={top}
+                    width={width}
+                    height={height}
+                    rotateAngle={rotateAngle}
+                    // aspectRatio={false}
+                    // minWidth={10}
+                    // minHeight={10}
+                    zoomable='n, w, s, e, nw, ne, se, sw'
+                    // rotatable={true}
+                    // onRotateStart={this.handleRotateStart}
+                    onRotate={this.handleRotate}
+                    // onRotateEnd={this.handleRotateEnd}
+                    // onResizeStart={this.handleResizeStart}
+                    onResize={this.handleResize}
+                    // onResizeEnd={this.handleUp}
+                    // onDragStart={this.handleDragStart}
+                    onDrag={this.handleDrag}
+                    // onDragEnd={this.handleDragEnd}
+                />
+            </div>
+        )
+    }
+}
+
+export default Draggable

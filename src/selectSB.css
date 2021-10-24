@@ -1,0 +1,101 @@
+.location_block1 {
+    height: 316.6px;
+    margin-top: 20px;
+    background: #80808014;
+}
+.location_select {
+    margin-left: 15px;
+    padding-top: 5px;
+    width: auto;
+    height: 20px;
+}
+.selectric-wrapper {
+    position: relative;
+    cursor: pointer;
+    margin: 0 !important;
+}
+.selectric-hide-select {
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}
+.selectric {
+    border: 1px solid #000;
+    background: #fff;
+    position: relative;
+    margin: 0 !important;
+}
+.location_block1_kolvo {
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.location_block1_title {
+    margin-left: 15px;
+    padding-top: 15px;
+}
+.inp_cont {
+    position: relative;
+    display: inline;
+    margin: 14px 30px 0 6px;
+    z-index: 99999;
+}
+#lea_solar_calc_cont input {
+    padding: 0 20px 0 2px;
+}
+.inp_cont input[type=number] {
+    font-weight: bold;
+    font-size: 1em;
+    color: #444;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000;
+    height: 20px;
+    width: 55px;
+
+}
+
+.location_block1_ugol {
+    margin-top: 10px;
+}
+.location_ugol {
+    display: flex;
+}
+#lea_solar_calc_ugol_radio {
+    /*padding-left: 15px;*/
+    left: 8px;
+    top: 13px;
+}
+#lea_solar_calc_ugol_radio {
+    display: flex;
+    justify-content: space-between;
+    /*margin-bottom: 10px;*/
+    flex-direction: column;
+}
+
+#lea_solar_calc_ugol_radio label {
+    padding-left: 30px;
+    line-height: 18px;
+}
+#lea_solar_calc_cont label {
+    position: relative;
+    cursor: pointer;
+}
+#lea_solar_calc_cont label input[type=radio] {
+    display: none;
+}
+.checkmarkr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+}

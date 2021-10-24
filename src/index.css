@@ -25,7 +25,7 @@ body {
   height: 275px;
   background: url("../src/images/icon.png");
   background-repeat: no-repeat;
-  background-position: top 5% left 2%;
+  background-position: top 5% left 10px;
   background-size: 80px;
   opacity: 1;
   position: absolute;
@@ -109,7 +109,6 @@ body {
   overflow: hidden;
 }
 .v60801_11 {
-  writing-mode: vertical-rl;
   width: 58px;
   height: 170px;
   background: linear-gradient(rgba(200,154,252,1), rgba(124,106,250,1));
@@ -121,18 +120,24 @@ body {
   overflow: hidden;
 }
 .v60801_12 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   width: 12px;
   color: rgba(255,255,255,1);
   position: absolute;
-  top: 9px;
-  /*
+  top: 13px;
   left: 23px;
-  */
   font-family: Roboto;
   font-weight: Bold;
-  font-size: 13px;
+  font-size: 16px;
   opacity: 1;
   text-align: center;
+}
+.v60801_11:hover {
+  background: linear-gradient(rgba(124,106,250,1), rgba(200,154,252,1) );
+}
+.v60801_11:active {
+  background: linear-gradient(rgba(124,50,250,1), rgba(200,154,100,1) );
 }
 .v10106_6 {
   width: 880px;
@@ -1743,15 +1748,21 @@ body {
   color: rgba(255,255,255,1);
   position: absolute;
   top: 10px;
-  /*
   left: 30px;
-  */
   font-family: Roboto;
   font-weight: Bold;
   font-size: 16px;
   opacity: 1;
   text-align: center;
-}/*
+}
+.v10099_103:hover {
+  background: linear-gradient(rgba(69,16,70,1), rgba(223,89,80,1) );
+}
+.v10099_103:active {
+  background: linear-gradient(rgba(69,16,17,1), rgba(223,89,180,1) );
+}
+
+/*
 .v10099_116 {
   width: 290px;
   height: 50px;
@@ -2072,7 +2083,9 @@ nav a {
 .map {
   width: 100%;
   height: 100%;
-  /*
-  margin: 150px 100px 350px 100px;
-  */
 }
+/*.cubes {
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+}*/

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="../src/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -13,7 +14,7 @@
   </head>
   <body>
 
-  <div id="root" class="cubes"></div>
+
   <div class="v60812_34">
     <div class="v10116_6">
       <div class="v10116_5">
@@ -23,7 +24,12 @@
     </div>
     <span class="v10091_31">JusticeIT</span>
     <div class="v60801_9">
-      <div class="v60801_11"><span class="v60801_12">Выбор СБ </span></div>
+      <div id="popup" class="popup">
+        <!--<div id="root" class="cubes"></div>-->
+      </div>
+<!--
+      <button id="btn" class="v60801_11" ><span class="v60801_12">Выбор СБ </span></button>
+-->
     </div>
 
 
@@ -45,7 +51,8 @@
     </div>
     <div class="v60792_14">
       <div class="v60792_15">
-        <div class="v60792_16"></div>
+        <div class="v60792_16"><div id="selectSB" class="selectSB"></div></div>
+
       </div>
     </div>
     <div class="v60812_38"><span class="v60792_21">Калькулятор нагрузки для солнечной электростанции</span>
@@ -55,7 +62,9 @@
     </div>
     <div class="v60792_17">
       <div class="v60792_18">
-        <div class="v60792_19"></div>
+        <div class="v60792_19">
+          <div id="selectConsume" class="selectConsume"></div>
+        </div>
       </div>
     </div>
     <div class="v60812_39"><span class="v60798_2">Выроботка солнечной электростанции по годам </span>
@@ -65,7 +74,9 @@
     </div>
     <div class="v60798_6">
       <div class="v60798_7">
-        <div class="v60798_8"></div>
+        <div class="v60798_8">
+          <canvas oncontextmenu="return false" onselectstart="return false" ondragstart="return false" id="lineChart" style=" top: 40px; width: 820px; height: 340px;" height="600" width="1200"></canvas>
+        </div>
       </div>
     </div>
     <div class="v10106_10"><span class="v10099_32">Плюсы использования солнечных батарей </span>
@@ -169,7 +180,7 @@
     <div class="v10116_12"><span class="v10099_101">Статьи каждую неделю</span><span class="v10099_110">E-mail</span>
       <div class="v10099_109">
         <div class="v10099_108"></div>
-        <div class="v10099_103"><span class="v10099_104">Подписаться</span></div>
+        <button class="v10099_103"><span class="v10099_104">Подписаться</span></button>
       </div>
 <!--
       <div class="v10099_116">
